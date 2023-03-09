@@ -1,0 +1,31 @@
+<!-- <h3>For Fecth Data Click down Button</h3>
+-->
+<button (click)="fetchData()" class="btn btn-primary" type="button">
+  <span
+    *ngIf="fetching"
+    class="spinner-border spinner-border-sm"
+    role="status"
+    aria-hidden="true"
+  ></span>
+  {{ fetching ? "fetching..." : "Fetch" }}
+</button>
+
+<table class="table" *ngIf="book != null">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.address }}</td>
+    </tr>
+  </tbody>
+</table>
+<p>{{ status }}</p>
