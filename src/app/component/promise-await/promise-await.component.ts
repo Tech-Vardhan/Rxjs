@@ -6,16 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./promise-await.component.scss'],
 })
 export class PromiseAwaitComponent {
-  ngOnInit() {
-    let promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('Data Resolved');
-      }, 3000);
-    });
-    async function getData() {
-      let response = await promise;
-      console.log(response);
-    }
-    getData();
-  }
+  ngOnInit() {}
 }

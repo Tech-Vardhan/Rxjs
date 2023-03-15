@@ -1,0 +1,61 @@
+<div class="container">
+  <div>
+    <input
+      type="text"
+      #inputVideo
+      class="form-control"
+      style="margin-top: 30px"
+    />
+    <button (click)="addVideo(inputVideo.value)" class="btn btn-primary my-3">
+      Add Videos
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">User-1</h5>
+          <ul *ngFor="let item of user1list">
+            <li>{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">User-2</h5>
+          <ul *ngFor="let item of user2list">
+            <li>{{ item }}</li>
+          </ul>
+          <button
+            (click)="user2()"
+            [ngClass]="user2Mode ? 'btn-danger' : 'btn-success'"
+            class="btn"
+          >
+            {{ user2Mode ? "Unsubscribe" : "Subscribe" }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">User-3</h5>
+          <ul *ngFor="let item of user3list">
+            <li>{{ item }}</li>
+          </ul>
+          <button
+            (click)="user3()"
+            [ngClass]="userMode3 ? 'btn-danger' : 'btn-success'"
+            class="btn"
+            class="btn btn-primary"
+          >
+            {{ userMode3 ? "unsubscribe" : "subscribe" }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
